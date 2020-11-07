@@ -13,7 +13,7 @@ regloginRoute.login = (req, res) => {
         else if (result == null) {
             res.json({ status: false, message: 'INVALID_USER' })
         } else {
-            res.json({ status: true, message: ' Login SUCCESS', data:result._id})
+            res.json({ status: true, message: ' Login SUCCESS', data:result})
             console.log(result)
         }
 
