@@ -15,8 +15,8 @@ app.use(cors())
 
 const regloginRoute = require('./register and login route');
 app.use(require('./register and login route'));
-;
-app.post("/login",regloginRoute.login)
+
+app.post("/login",regloginRoute.login);
 app.post("/reguser",regloginRoute.reguser);
 
 //PORT

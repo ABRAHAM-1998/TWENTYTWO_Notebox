@@ -8,15 +8,18 @@ const { ObjectId } = require("mongodb");
 
 regloginRoute.login = (req, res) => {
     console.log(req.body)
-    db.getDB().collection('logindata').insertOne(req.body)
-
-    res.send(req.body)
-    
+    res.json({ status: true, message: 'succesfully deleted' })
 }
 
-regloginRoute.reguser = (req,res) =>{
-    console,log(req.body.name)
-    res.json({ status: true, message: 'succesfully deleted' })
+regloginRoute.reguser = (req, res) => {
+    console.log(req.body.name)
+    if (req) {
+        db.getDB().collection('UserAccounts').insertOne(req.body, (err, result) => {
+            if (err) throw err
+            res.json({ status: true, message: 'succesfully deleted' })
+        })
+
+    }
 }
 
 
