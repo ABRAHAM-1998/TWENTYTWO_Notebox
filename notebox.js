@@ -19,6 +19,7 @@ app.use(require('./register and login route'));
 app.post("/login",regloginRoute.login);
 app.post("/reguser",regloginRoute.reguser);
 app.post("/createbday",regloginRoute.createBday);
+app.post("/getBirthdayList",regloginRoute.getBirthdays)
 
 //PORT
 const PORT = process.env.PORT || 4202;
