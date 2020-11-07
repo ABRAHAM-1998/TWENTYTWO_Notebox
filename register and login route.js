@@ -38,4 +38,15 @@ regloginRoute.reguser = (req, res) => {
     }
 }
 
+regloginRoute.createBday = (req,res)=>{
+    console.log(req.body)
+    db.getDB().collection('BirthDay').insertOne(req.body,(err,result)=>{
+        if(err) throw err
+        else{
+            res.json({ status: true, message: 'succesfully created' })
+
+        }
+    })
+}
+
 module.exports = regloginRoute
