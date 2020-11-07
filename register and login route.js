@@ -49,7 +49,13 @@ regloginRoute.createBday = (req,res)=>{
     })
 }
 regloginRoute.getBirthdays  = (req, res)=>{
-    res.json({ name: "true", day: 'succesfully',year:"test",month:"tested" })
+
+    data=[
+        { name: "Rakku", day: '31-10-1998',year:"test",month:"tested" },
+        { name: "Rakku", day: '31-10-1998',year:"test",month:"tested" },
+        { name: "Rakku", day: '31-10-1998',year:"test",month:"tested" }
+    ]
+    res.json(data)
 }
 
 module.exports = regloginRoute
