@@ -20,7 +20,7 @@ app.post("/login",regloginRoute.login);
 app.post("/reguser",regloginRoute.reguser);
 
 //PORT
-const PORT = process.env.PORT || 4200;
+const PORT = process.env.PORT || 4201;
 const server = app.listen(PORT, console.log('PORT RUNNING ON ::::::4200 :::::'))
 
 //DATABASE CONNNECTION

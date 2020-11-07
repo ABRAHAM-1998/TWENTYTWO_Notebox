@@ -12,14 +12,13 @@ regloginRoute.login = (req, res) => {
 }
 
 regloginRoute.reguser = (req, res) => {
-    console.log(req.body.name)
    var name = req.body.name
     var email = req.body.email
     var password  = req.body.password
     var phone = req.body.phone
 
     
-    if (name != '' || email != '' ||password != ''|| phone != '') {
+    if (name !== ''&& email !== ''&& password !== ''&& phone !== ''){
         db.getDB().collection('UserAccounts').insertOne(req.body, (err, result) => {
             if (err) throw err
             res.json({ status: true, message: 'succesfully Registered' })
@@ -29,6 +28,5 @@ regloginRoute.reguser = (req, res) => {
         res.json({ status: false, message: 'Registration failed' })
     }
 }
-
 
 module.exports = regloginRoute
