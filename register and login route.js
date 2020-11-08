@@ -50,12 +50,12 @@ regloginRoute.createBday = (req,res)=>{
 }
 regloginRoute.getBirthdays  = (req, res)=>{
 
-    data=[
-        { name: "Rakku", day: '31-10-1998',year:"test",month:"tested" },
-        { name: "Rakku", day: '31-10-1998',year:"test",month:"tested" },
-        { name: "Rakku", day: '31-10-1998',year:"test",month:"tested" }
-    ]
-    res.json(data)
+    db.getDB().collection('BirthDay').find({UserID:req.body.UserID}).toArray((err, resul) => {
+        if(err)throw err
+        else{
+            res.json({status:true,message:"recevued",result:resul})
+        }
+    })
 }
 
 module.exports = regloginRoute
