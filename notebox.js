@@ -13,13 +13,18 @@ app.use(cors())
 
 
 
-const regloginRoute = require('./register and login route');
-app.use(require('./register and login route'));
+const regloginRoute = require('./Routes/register and login route');
+app.use(require('./Routes/register and login route'));
+
+// const Birthday = require('./Routes/Birthday');
+app.use(require('./Routes/Birthday'));
 
 app.post("/login",regloginRoute.login);
 app.post("/reguser",regloginRoute.reguser);
-app.post("/createbday",regloginRoute.createBday);
-app.post("/getBirthdayList",regloginRoute.getBirthdays)
+
+///?/????????////birthdays
+app.post("/createbday",Birthday.createBday);
+app.post("/getBirthdayList",Birthday.getBirthdays)
 
 //PORT
 const PORT = process.env.PORT || 4202;

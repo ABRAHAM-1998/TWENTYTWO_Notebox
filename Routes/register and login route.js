@@ -1,6 +1,6 @@
 const express = require('express');
 const regloginRoute = express.Router();
-const db = require('./database/dbmongo')
+const db = require('../database/dbmongo')
 const { ObjectId } = require("mongodb");
 
 
