@@ -1,5 +1,5 @@
 const express = require('express');
-const BirthDay = express.Router();
+const Birthday = express.Router();
 const db = require('../database/dbmongo')
 const { ObjectId } = require("mongodb");
 
