@@ -22,5 +22,13 @@ Birthday.getBirthdays  = (req, res)=>{
         }
     })
 }
+Birthday.deleteBirthday = (req,res)=>{
+    db.getDB().collection('BirthDay').deleteOne({UserID:req.body.UserID, _id:ObjectId(req.body.Item_ID)},(err,result)=>{
+        if(err) throw err
+        else{
+            res.json({status:true,message:"deleted"})
+        }
+    })
+}
 
 module.exports = Birthday
