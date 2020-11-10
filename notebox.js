@@ -24,7 +24,8 @@ app.post("/reguser",regloginRoute.reguser);
 
 ///?/????????////birthdays
 app.post("/createbday",Birthday.createBday);
-app.post("/getBirthdayList",Birthday.getBirthdays)
+app.post("/getBirthdayList",Birthday.getBirthdays);
+app.post("/birthDayDelete",Birthday.deleteBirthday);
 
 //PORT
 const PORT = process.env.PORT || 4202;
