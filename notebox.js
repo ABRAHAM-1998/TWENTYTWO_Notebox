@@ -16,7 +16,7 @@ app.use(cors())
 const regloginRoute = require('./Routes/register and login route');
 app.use(require('./Routes/register and login route'));
 
-// const Birthday = require('./Routes/Birthday');
+const Birthday = require('./Routes/Birthday');
 app.use(require('./Routes/Birthday'));
 
 app.post("/login",regloginRoute.login);
