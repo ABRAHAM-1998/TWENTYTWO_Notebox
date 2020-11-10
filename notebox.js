@@ -28,6 +28,7 @@ app.post("/getBirthdayList",Birthday.getBirthdays);
 app.post("/birthDayDelete",Birthday.deleteBirthday);
 
 app.post("/createMemories",Birthday.createMemories);
+app.post("/memoriesRecieve",Birthday.memoriesRecieve)
 
 //PORT
 const PORT = process.env.PORT || 4202;

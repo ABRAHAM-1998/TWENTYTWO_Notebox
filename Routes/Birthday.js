@@ -43,4 +43,14 @@ Birthday.createMemories = (req, res)=>{
 
 }
 
+Birthday.memoriesRecieve  = (req, res)=>{
+
+    db.getDB().collection('Memories').find({UserID:req.body.UserID}).toArray((err, resul) => {
+        if(err)throw err
+        else{
+            res.json({status:true,message:"recevued",memories:resul})
+        }
+    })
+}
+
 module.exports = Birthday
