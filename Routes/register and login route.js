@@ -58,4 +58,6 @@ regloginRoute.getBirthdays  = (req, res)=>{
     })
 }
 
+
+
 module.exports = regloginRoute

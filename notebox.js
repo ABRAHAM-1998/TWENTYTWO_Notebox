@@ -27,6 +27,8 @@ app.post("/createbday",Birthday.createBday);
 app.post("/getBirthdayList",Birthday.getBirthdays);
 app.post("/birthDayDelete",Birthday.deleteBirthday);
 
+app.post("createMemories",Birthday.createMemories);
+
 //PORT
 const PORT = process.env.PORT || 4202;
 const server = app.listen(PORT, console.log('PORT RUNNING ON ::::::4200 :::::'))
