@@ -30,6 +30,28 @@ app.post("/birthDayDelete",Birthday.deleteBirthday);
 app.post("/createMemories",Birthday.createMemories);
 app.post("/memoriesRecieve",Birthday.memoriesRecieve)
 
+app.post("/createreminder",Birthday.createreminder);
+app.post("/reminderecieve",Birthday.reminderecieve);
+
+app.post("/createcertificates",Birthday.createcertificates);
+app.post("/recievecertificates",Birthday.recievecertificates);
+
+app.post("/createveriviedcards",Birthday.createveriviedcards);
+app.post("/recieveverificationcards",Birthday.recieveverificationcards);
+
+app.post("/createsavedate",Birthday.createsavedate);
+app,post("/recievesavedate",Birthday.recievesavedate);
+
+app.post("/createcontact",Birthday.createcontact);
+app,post("/recievecontact",Birthday.recievecontact);
+
+app.post("/createnotes",Birthday.createnotes);
+app,post("/recievenotes",Birthday.recievenotes);
+
+
+
+
+
 //PORT
 const PORT = process.env.PORT || 4202;
 const server = app.listen(PORT, console.log('PORT RUNNING ON ::::::4200 :::::'))
