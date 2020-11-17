@@ -40,13 +40,13 @@ app.post("/createveriviedcards",Birthday.createveriviedcards);
 app.post("/recieveverificationcards",Birthday.recieveverificationcards);
 
 app.post("/createsavedate",Birthday.createsavedate);
-app,post("/recievesavedate",Birthday.recievesavedate);
+app.post("/recievesavedate",Birthday.recievesavedate);
 
 app.post("/createcontact",Birthday.createcontact);
-app,post("/recievecontact",Birthday.recievecontact);
+app.post("/recievecontact",Birthday.recievecontact);
 
 app.post("/createnotes",Birthday.createnotes);
-app,post("/recievenotes",Birthday.recievenotes);
+app.post("/recievenotes",Birthday.recievenotes);
 
 
 
