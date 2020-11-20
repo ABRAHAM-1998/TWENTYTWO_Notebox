@@ -28,25 +28,34 @@ app.post("/getBirthdayList",Birthday.getBirthdays);
 app.post("/birthDayDelete",Birthday.deleteBirthday);
 
 app.post("/createMemories",Birthday.createMemories);
-app.post("/memoriesRecieve",Birthday.memoriesRecieve)
+app.post("/memoriesRecieve",Birthday.memoriesRecieve);
+app.post("/deletememories",Birthday.deletememories);
 
 app.post("/createreminder",Birthday.createreminder);
 app.post("/reminderecieve",Birthday.reminderecieve);
+app.post("/deletereminders",Birthday.deletereminders);
 
 app.post("/createcertificates",Birthday.createcertificates);
 app.post("/recievecertificates",Birthday.recievecertificates);
+app.post("/deletecertificates",Birthday.deletecertificates);
+
 
 app.post("/createveriviedcards",Birthday.createveriviedcards);
 app.post("/recieveverificationcards",Birthday.recieveverificationcards);
+app.post("/deleteverifications",Birthday.deleteverifications);
 
 app.post("/createsavedate",Birthday.createsavedate);
 app.post("/recievesavedate",Birthday.recievesavedate);
+app.post("/deletesavedates",Birthday.deletesavedates);
 
 app.post("/createcontact",Birthday.createcontact);
 app.post("/recievecontact",Birthday.recievecontact);
+app.post("/deletecontacts",Birthday.deletecontacts);
 
 app.post("/createnotes",Birthday.createnotes);
 app.post("/recievenotes",Birthday.recievenotes);
+app.post("/deletenotes",Birthday.deletenotes);
+
 
 
 

@@ -52,6 +52,15 @@ Birthday.memoriesRecieve  = (req, res)=>{
         }
     })
 }
+//delete
+Birthday.deletememories = (req,res)=>{
+    db.getDB().collection('Memories').deleteOne({UserID:req.body.UserID, _id:ObjectId(req.body.Item_ID)},(err,result)=>{
+        if(err) throw err
+        else{
+            res.json({status:true,message:"deleted"})
+        }
+    })
+}
 // ======================================REMINDER==============================>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 Birthday.createreminder = (req, res)=>{
@@ -74,7 +83,14 @@ Birthday.reminderecieve  = (req, res)=>{
         }
     })
 }
-
+Birthday.deletereminders = (req,res)=>{
+    db.getDB().collection('Reminders').deleteOne({UserID:req.body.UserID, _id:ObjectId(req.body.Item_ID)},(err,result)=>{
+        if(err) throw err
+        else{
+            res.json({status:true,message:"deleted"})
+        }
+    })
+}
 // +++++++++===========================CERTIFICATES========================>>>>
 Birthday.createcertificates = (req, res)=>{
     db.getDB().collection('Certificates').insertOne(req.body,(err,result)=>{
@@ -93,6 +109,14 @@ Birthday.recievecertificates  = (req, res)=>{
         if(err)throw err
         else{
             res.json({status:true,message:"certificates inserted",certificates:resul})
+        }
+    })
+}
+Birthday.deletecertificates = (req,res)=>{
+    db.getDB().collection('Certificates').deleteOne({UserID:req.body.UserID, _id:ObjectId(req.body.Item_ID)},(err,result)=>{
+        if(err) throw err
+        else{
+            res.json({status:true,message:"deleted"})
         }
     })
 }
@@ -116,6 +140,14 @@ Birthday.recieveverificationcards  = (req, res)=>{
         }
     })
 }
+Birthday.deleteverifications = (req,res)=>{
+    db.getDB().collection('VerificationCards').deleteOne({UserID:req.body.UserID, _id:ObjectId(req.body.Item_ID)},(err,result)=>{
+        if(err) throw err
+        else{
+            res.json({status:true,message:"deleted"})
+        }
+    })
+}
 // ========================SAVE THE DATE ++=====================
 Birthday.createsavedate = (req, res)=>{
     db.getDB().collection('Savedates').insertOne(req.body,(err,result)=>{
@@ -133,6 +165,14 @@ Birthday.recievesavedate  = (req, res)=>{
         if(err)throw err
         else{
             res.json({status:true,message:"Savedates ",saveDateClasData:resul})
+        }
+    })
+}
+Birthday.deletesavedates = (req,res)=>{
+    db.getDB().collection('Savedates').deleteOne({UserID:req.body.UserID, _id:ObjectId(req.body.Item_ID)},(err,result)=>{
+        if(err) throw err
+        else{
+            res.json({status:true,message:"deleted"})
         }
     })
 }
@@ -156,6 +196,14 @@ Birthday.recievecontact  = (req, res)=>{
         }
     })
 }
+Birthday.deletecontacts = (req,res)=>{
+    db.getDB().collection('Contacts').deleteOne({UserID:req.body.UserID, _id:ObjectId(req.body.Item_ID)},(err,result)=>{
+        if(err) throw err
+        else{
+            res.json({status:true,message:"deleted"})
+        }
+    })
+}
 // ======================NOTES +==========================
 Birthday.createnotes = (req, res)=>{
     db.getDB().collection('Notes').insertOne(req.body,(err,result)=>{
@@ -173,6 +221,14 @@ Birthday.recievenotes  = (req, res)=>{
         if(err)throw err
         else{
             res.json({status:true,message:"Notes ",Notes:resul})
+        }
+    })
+}
+Birthday.deletenotes = (req,res)=>{
+    db.getDB().collection('Notes').deleteOne({UserID:req.body.UserID, _id:ObjectId(req.body.Item_ID)},(err,result)=>{
+        if(err) throw err
+        else{
+            res.json({status:true,message:"deleted"})
         }
     })
 }
