@@ -58,6 +58,7 @@ app.post("/deletenotes",Birthday.deletenotes);
 
 
 app.post("/createlocker",Birthday.createlocker);
+app.post("/lockercheck",Birthday.lockercheck)
 
 
 
