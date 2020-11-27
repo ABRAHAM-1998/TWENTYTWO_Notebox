@@ -234,10 +234,11 @@ Birthday.deletenotes = (req,res)=>{
 }
 // ========================================================================?
 Birthday.createlocker = (req,res)=>{
-    db.getDB().collection('userdata').updateOne({_id:ObjectId(req.body.UserID)},{ $set: { lockpassword: req.body.lockpassword,locker:"1" } },(err,result)=>{
+    db.getDB().collection('UserAccounts').updateOne({_id:ObjectId(req.body.UserID)},{ $set: { lockpassword: req.body.lockpassword,locker:"1" } },(err,result)=>{
         if(err) throw err
         else{
             res.json({status:true,message:"deleted"})
+            console.log(result.ops)
         }
     })
 }
