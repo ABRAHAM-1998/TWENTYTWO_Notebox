@@ -79,7 +79,7 @@ Birthday.passwordrecieve  = (req, res)=>{
     db.getDB().collection('Passwords').find({UserID:req.body.UserID}).toArray((err, resul) => {
         if(err)throw err
         else{
-            res.json({status:true,message:"recevued",Reminder:resul})
+            res.json({status:true,message:"recevued",passwordsArray:resul})
         }
     })
 }
