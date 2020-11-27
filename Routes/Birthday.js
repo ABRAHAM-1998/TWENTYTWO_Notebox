@@ -63,8 +63,8 @@ Birthday.deletememories = (req,res)=>{
 }
 // ======================================REMINDER==============================>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-Birthday.createreminder = (req, res)=>{
-    db.getDB().collection('Reminders').insertOne(req.body,(err,result)=>{
+Birthday.createpassword = (req, res)=>{
+    db.getDB().collection('Passwords').insertOne(req.body,(err,result)=>{
         if(err) throw err
         else{
             res.json({ status: true, message: 'succesfully created' })
@@ -74,17 +74,17 @@ Birthday.createreminder = (req, res)=>{
 
 }
 
-Birthday.reminderecieve  = (req, res)=>{
+Birthday.passwordrecieve  = (req, res)=>{
 
-    db.getDB().collection('Reminders').find({UserID:req.body.UserID}).toArray((err, resul) => {
+    db.getDB().collection('Passwords').find({UserID:req.body.UserID}).toArray((err, resul) => {
         if(err)throw err
         else{
             res.json({status:true,message:"recevued",Reminder:resul})
         }
     })
 }
-Birthday.deletereminders = (req,res)=>{
-    db.getDB().collection('Reminders').deleteOne({UserID:req.body.UserID, _id:ObjectId(req.body.Item_ID)},(err,result)=>{
+Birthday.deletesavepassword = (req,res)=>{
+    db.getDB().collection('Passwords').deleteOne({UserID:req.body.UserID, _id:ObjectId(req.body.Item_ID)},(err,result)=>{
         if(err) throw err
         else{
             res.json({status:true,message:"deleted"})

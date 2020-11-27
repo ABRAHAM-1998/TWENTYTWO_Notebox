@@ -31,9 +31,9 @@ app.post("/createMemories",Birthday.createMemories);
 app.post("/memoriesRecieve",Birthday.memoriesRecieve);
 app.post("/deletememories",Birthday.deletememories);
 
-app.post("/createreminder",Birthday.createreminder);
-app.post("/reminderecieve",Birthday.reminderecieve);
-app.post("/deletereminders",Birthday.deletereminders);
+app.post("/createpassword",Birthday.createpassword);
+app.post("/passwordrecieve",Birthday.passwordrecieve);
+app.post("/deletesavepassword",Birthday.deletesavepassword);
 
 app.post("/createcertificates",Birthday.createcertificates);
 app.post("/recievecertificates",Birthday.recievecertificates);
