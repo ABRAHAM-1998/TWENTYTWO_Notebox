@@ -258,6 +258,14 @@ Birthday.lockercheck = (req, res) => {
 
     })
 }
-
+//===================================================================
+Birthday.deletepasswords = (req, res) => {
+    db.getDB().collection('Notes').deleteOne({ UserID: req.body.UserID, _id: ObjectId(req.body.Item_ID) }, (err, result) => {
+        if (err) throw err
+        else {
+            res.json({ status: true, message: "deleted" })
+        }
+    })
+}
 //=====================================================================
 module.exports = Birthday
