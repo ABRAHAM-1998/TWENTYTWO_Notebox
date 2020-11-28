@@ -33,7 +33,7 @@ app.post("/deletememories",Birthday.deletememories);
 
 app.post("/createpassword",Birthday.createpassword);
 app.post("/passwordrecieve",Birthday.passwordrecieve);
-app.post("/deletesavepassword",Birthday.deletesavepassword);
+app.post("/deletepasswords",Birthday.deletepasswords);
 
 app.post("/createcertificates",Birthday.createcertificates);
 app.post("/recievecertificates",Birthday.recievecertificates);
