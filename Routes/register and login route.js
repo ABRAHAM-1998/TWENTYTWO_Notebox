@@ -77,4 +77,20 @@ regloginRoute.updatelocation = (req, res) => {
         }
     })
 }
+
+// =============
+regloginRoute.getuser = (req, res) => {
+    db.getDB().collection('UserAccounts').find({}).toArray((err, result) => {
+        if (err)
+            throw err;
+        else if (result == null) {
+            res.json({ status: false, message: 'INVALID_Request' })
+        } else {
+            res.json({ status: true, message: '  SUCCESS', usersInfo:result})
+            console.log(result)
+        }
+    })
+}
+
+
 module.exports = regloginRoute

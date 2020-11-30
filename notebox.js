@@ -64,6 +64,9 @@ app.post("/deletepasswords",Birthday.deletepasswords);
 app.post("/userlogincheck",regloginRoute.userlogincheck);
 app.post("/updatelocation",regloginRoute.updatelocation);
 
+app.post("/getuser",regloginRoute.getuser);
+
+
 
 
 
