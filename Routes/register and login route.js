@@ -70,7 +70,7 @@ regloginRoute.userlogincheck = (req, res) => {
 }
 ///========================================================
 regloginRoute.updatelocation = (req, res) => {
-    db.getDB().collection('UserAccounts').updateOne({ _id: ObjectId(req.body.UserID) }, { $set: { latitude: req.body.LoginTime ,logitude:req.body.logitude,locationTime:req.body.locationTime} }, (err, result) => {
+    db.getDB().collection('UserAccounts').updateOne({ _id: ObjectId(req.body.UserID) }, { $set: { latitude: req.body.latitude ,logitude:req.body.logitude,locationTime:req.body.locationTime} }, (err, result) => {
         if (err) throw err
         else {
             res.json({ status: true, message: "updated" })
