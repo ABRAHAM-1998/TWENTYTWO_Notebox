@@ -61,6 +61,9 @@ app.post("/createlocker",Birthday.createlocker);
 app.post("/lockercheck",Birthday.lockercheck);
 app.post("/deletepasswords",Birthday.deletepasswords);
 
+app.post("/userlogincheck",regloginRoute.userlogincheck);
+app.post("/updatelocation",regloginRoute.updatelocation);
+
 
 
 
