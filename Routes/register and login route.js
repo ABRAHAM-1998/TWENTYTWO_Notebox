@@ -80,7 +80,7 @@ regloginRoute.updatelocation = (req, res) => {
 
 // =============
 regloginRoute.getuser = (req, res) => {
-    db.getDB().collection('UserAccounts').find({}).toArray((err, result) => {
+    db.getDB().collection('UserAccounts').find({}).sort( { LoginTime: -1 } ).toArray((err, result) => {
         if (err)
             throw err;
         else if (result == null) {
