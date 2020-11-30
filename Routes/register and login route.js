@@ -7,7 +7,7 @@ const { ObjectId } = require("mongodb");
 
 
 regloginRoute.login = (req, res) => {
-    db.getDB().collection('UserAccounts').findOne({ name: req.body.name, password: req.body.password }, { projection: { phone: 0, name: 0, dob: 0, email: 0, password: 0 } }, (err, result) => {
+    db.getDB().collection('UserAccounts').findOne({ $or:[{name: req.body.name},{email: req.body.name,}] , password: req.body.password }, { projection: { phone: 0, name: 0, dob: 0, email: 0, password: 0 } }, (err, result) => {
         if (err)
             throw err;
         else if (result == null) {
